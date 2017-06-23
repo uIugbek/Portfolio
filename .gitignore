@@ -1,5 +1,5 @@
-/bin
-/.vs
-/obj
-/.vscode
-/node_modules
+**/bin
+**/.vs
+**/obj
+**/.vscode
+**/node_modules
