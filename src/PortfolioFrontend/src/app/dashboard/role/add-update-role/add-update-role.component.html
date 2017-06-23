@@ -1,0 +1,50 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card-box">
+			<div class="row">
+				<div class="col-md-6">
+					<h1>{{message}}</h1>
+					<form (ngSubmit)="addOrUpdate()" #roleForm="ngForm">
+						<div class="form-group">
+							<ul class="nav nav-tabs tabs" style="width: 100%;">
+								<li *ngFor="let culture of cultures; let i = index" class="tab" style="width: 25%;">
+									<a href="#home-{{i}}" data-toggle="tab" aria-expanded="false" style="padding:0">
+										<span class="visible-xs"><i class="fa fa-home"></i></span>
+										<span class="hidden-xs">{{culture.name}}</span>
+									</a>
+								</li>
+								<div class="indicator" style="right: 415px; left: 208px;"></div>
+							</ul>
+							<div class="tab-content">
+								<div *ngFor="let culture of cultures; let i = index" class="tab-pane" id="home-{{i}}">
+									<div class="form-group">
+										<label class="control-label" for="name{{i}}">Name</label>
+										<input id="name{{i}}" name="name{{i}}" type="text" class="form-control" placeholder="Name" [(ngModel)]="role.localizations[i].name"
+										/>
+									</div>
+									<div class="form-group">
+										<label class="control-label" for="description{{i}}">Description</label>
+										<input id="description{{i}}" name="description{{i}}" type="text" class="form-control" placeholder="Description" [(ngModel)]="role.localizations[i].description"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div *ngFor="let permission of permissions; let i = index" class="checkbox checkbox-primary checkbox-circle">
+								<input id="checkbox-{{i}}" name="checkbox-{{i}}" type="checkbox" [(ngModel)]="role.roleInPermissions[i].isAccessible">
+								<label for="checkbox-{{i}}">
+                  					{{permission.name}}
+                				</label>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary waves-effect waves-light" [disabled]="!roleForm.valid">
+              				{{isNew ? 'Create Permission' : 'Update Permission'}}
+            			</button>
+						<a routerLink="{{isNew ? '../' : '../../'}}" class="btn btn-default waves-effect waves-light">Back</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

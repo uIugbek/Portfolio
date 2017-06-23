@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+a {
+    color: #03A9F4;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;   
+}
+
+a.active {
+    color: #5fbeaa !important;
+}
+
+/*.container-fluid{
+    margin-top: 70px;
+}*/

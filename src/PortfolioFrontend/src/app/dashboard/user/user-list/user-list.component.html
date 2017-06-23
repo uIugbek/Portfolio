@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-fluid">
+                        <h1>{{message}}</h1>
+                        <div class="row">
+                            <a routerLink="add" class="btn btn-default">Create new User</a><br /><br />
+                        </div>
+                        <div class="row" *ngIf="users.length > 0">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>№</th>
+                                            <th>Name</th>
+                                            <th>Login</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th class="text-right"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let user of users; let i = index">
+                                            <td>{{i + 1}}</td>
+                                            <td>{{user.name}}</td>
+                                            <td>{{user.login}}</td>
+                                            <td>{{user.email}}</td>
+                                            <td>{{user.isBlocked}}</td>
+                                            <td class="text-right">
+                                                <a routerLink="update/{{user.id}}" class="btn btn-md btn-default">Update</a>
+                                                <button type="button" class="btn btn-md btn-danger" (click)="deleteUser(user)">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" *ngIf="users.length <= 0">
+                            <span>No items found</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

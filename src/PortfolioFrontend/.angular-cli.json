@@ -1,0 +1,84 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "portfolio"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "favicon_1.ico",
+        "styles/ubold_2_2/images"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles/app.scss",
+        "styles.css"
+      ],
+      "scripts": [
+        "styles/ubold_2_2/js/jquery.min.js",
+        "styles/ubold_2_2/js/bootstrap.min.js",
+        "styles/ubold_2_2/js/detect.js",
+        "styles/ubold_2_2/js/fastclick.js",
+        "styles/ubold_2_2/js/jquery.slimscroll.js",
+        "styles/ubold_2_2/js/jquery.blockUI.js",
+        "styles/ubold_2_2/js/waves.js",
+        "styles/ubold_2_2/js/wow.min.js",
+        "styles/ubold_2_2/js/jquery.nicescroll.js",
+        "styles/ubold_2_2/js/jquery.scrollTo.min.js",
+        
+        "styles/ubold_2_2/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js",
+        "styles/ubold_2_2/plugins/switchery/js/switchery.min.js",
+        "styles/ubold_2_2/plugins/multiselect/js/jquery.multi-select.js",
+        "styles/ubold_2_2/plugins/jquery-quicksearch/jquery.quicksearch.js",
+        "styles/ubold_2_2/plugins/bootstrap-select/js/bootstrap-select.min.js",
+        "styles/ubold_2_2/plugins/waypoints/lib/jquery.waypoints.js",
+        "styles/ubold_2_2/plugins/counterup/jquery.counterup.min.js",
+        "styles/ubold_2_2/plugins/raphael/raphael-min.js",
+        "styles/ubold_2_2/plugins/jquery-knob/jquery.knob.js",
+
+        "styles/ubold_2_2/js/jquery.core.js",
+        "styles/ubold_2_2/js/jquery.app.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "component": {}
+  }
+}
