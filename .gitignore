@@ -3,5 +3,5 @@
 **/obj
 **/.vscode
 **/node_modules
-**/.xproj.user
+**/.user
 **/PublishProfiles
